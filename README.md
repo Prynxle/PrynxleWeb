@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zedrick S. Espiritu — Developer Portfolio
+
+A clean, minimal developer portfolio built with Next.js 16 and Tailwind CSS 4. Showcases projects, experience, skills, and certifications in a modern, responsive layout with subtle interactive details.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **UI:** React 19, TypeScript
+- **Styling:** Tailwind CSS 4
+- **Icons:** Lucide React
+- **Fonts:** Geist Sans & Geist Mono (via `next/font`)
+
+## Features
+
+- Responsive single-page layout with smooth scroll navigation
+- Sticky header with scroll-aware background blur
+- Mobile-friendly hamburger menu
+- Interactive hover sound effects (Web Audio API)
+- Custom color system with CSS variables
+- Monospace label accents and dot-grid background pattern
+- Sections: Hero, Experience, Education, Projects, Skills, Certifications, Leadership, References, Footer
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Install & Run
 
 ```bash
+# Clone the repository
+git clone https://github.com/PrynxleWeb/opencode-lab.git
+cd opencode-lab
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css        # Global styles & CSS variables
+│   ├── layout.tsx         # Root layout with metadata
+│   └── page.tsx           # Main page composition
+├── components/
+│   ├── Header.tsx         # Sticky nav with mobile menu
+│   ├── Hero.tsx           # Intro section with social links
+│   ├── Experience.tsx     # Work experience
+│   ├── Education.tsx      # Academic background
+│   ├── Projects.tsx       # Project showcase grid
+│   ├── Skills.tsx         # Technical skills by category
+│   ├── Certifications.tsx # AWS & training certs
+│   ├── Leadership.tsx     # Leadership & extracurriculars
+│   ├── References.tsx     # Academic references
+│   ├── Footer.tsx         # Contact info & socials
+│   ├── SectionLabel.tsx   # Reusable section label
+│   └── TechIcon.tsx       # Tech stack icons
+└── assets/                # Images & icons
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit the data arrays directly in each component file to update content:
 
-## Deploy on Vercel
+- `src/components/Projects.tsx` — Add/remove projects
+- `src/components/Skills.tsx` — Update skill categories
+- `src/components/Experience.tsx` — Modify work experience
+- `src/components/Education.tsx` — Update education details
+- `src/components/Certifications.tsx` — Add certifications
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Personal portfolio project. All rights reserved.

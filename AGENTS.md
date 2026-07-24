@@ -1,5 +1,6 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+- Every Feature addition to the project must go with a verification and final checking pass.
+- Do not commit and wait for my go signal.
+- Explain what you did in the end in a short summary
+- Use frontend-design, find-skills, ai-sdk skills only.
+- Remove any dead codes, repeating code, bad code, and unused dependencies unless it will likely be used in the future but you will inform me
+- This is a portfolio
