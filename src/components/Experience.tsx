@@ -12,10 +12,10 @@ export default function Experience() {
           </div>
           <div className="flex flex-col gap-1 flex-1">
             <h3 className="text-lg font-semibold text-ink">
-              Full Stack Developer
+              Full Stack Developer Intern
             </h3>
-            <p className="text-sm text-muted">NexVision Innovations</p>
-            <span className="label-mono mt-0.5">2025 – Present</span>
+            <p className="text-sm text-muted">NexVision Innovations BGC Taguig</p>
+            <span className="label-mono mt-0.5">2026</span>
           </div>
           <div className="flex gap-1.5 shrink-0 flex-wrap justify-end">
             <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 bg-ink text-surface">

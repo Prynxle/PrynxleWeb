@@ -16,15 +16,15 @@ const skillGroups = [
   },
   {
     category: "Database & Auth",
-    skills: ["Supabase", "PostgreSQL", "SQLite", "GoogleAuth"],
+    skills: ["Supabase", "SupabaseAuth", "PostgreSQL", "SQLite", "GoogleAuth", "Firebase"],
   },
   {
     category: "Tools & Services",
-    skills: ["SendGrid", "Nodemailer", "Netlify", "Vercel", "GitHub", "AWS", "PyInstaller"],
+    skills: ["SendGrid", "Nodemailer", "Netlify", "Vercel", "GitHub", "AWS", "PyInstaller", "Cursor", "Visual Studio Code", "Twillio"],
   },
   {
     category: "AI & Cloud",
-    skills: ["GoogleGemini", "AmazonPartyRock", "Bedrock"],
+    skills: ["GoogleGemini", "AmazonPartyRock", "Bedrock", "OpenRouter"],
   },
 ];
 

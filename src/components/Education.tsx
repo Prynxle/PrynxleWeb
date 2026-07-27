@@ -4,24 +4,26 @@ import SectionLabel from "./SectionLabel";
 const education = [
   {
     degree: "Bachelor of Science in Computer Science",
-    school: "Our Lady of Perpetual Succor College",
+    school: "Our Lady of Perpetual Succor College Marikina",
     period: "2023 – 2027",
     highlights: [
-      "Dean's Lister",
+      "Dean's Lister (2023-2026)",
+      "Rank 7th Dean' Lister 2nd Year",
       "Vice President, OLOPSC Computer Society (2025–2026)",
+      "Iskolar ni Omie (San Mateo Scholar) 1st Batch 2023-2026",
     ],
     coursework:
       "Data Structures and Algorithm, Software Engineering, Object-Oriented Programming, Web and Mobile Development, Database Management Systems, Computational Science",
   },
   {
     degree: "TVL – Computer Programming",
-    school: "Senior High School",
+    school: "San Mateo Senior High School",
     period: "2021 – 2023",
     highlights: [
       "Academic Excellence With Honors",
       "Best in Work Immersion Award",
     ],
-    coursework: null,
+    coursework: "Web Development and Software Development",
   },
 ];
 
