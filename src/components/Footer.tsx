@@ -37,11 +37,11 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-muted">
           <a
-            href="mailto:zedrick.espiritu07292004@gmail.com"
+            href="mailto:zedrickespiritu.s@gmail.com"
             className="flex items-center gap-2 hover:text-ink transition-colors"
           >
             <Mail size={14} strokeWidth={1.5} />
-            zedrick.espiritu07292004@gmail.com
+            zedrickespiritu.s@gmail.com
           </a>
           <div className="hidden sm:block w-px h-4 bg-rule" />
           <div className="flex items-center gap-2">

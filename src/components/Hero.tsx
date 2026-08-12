@@ -75,11 +75,11 @@ export default function Hero() {
             <div className="flex items-center gap-2">
               <Mail size={14} strokeWidth={1.5} />
               <a
-                href="mailto:zedrick.espiritu07292004@gmail.com"
+                href="mailto:zedrickespiritu.s@gmail.com"
                 className="hover:text-ink transition-colors"
                 onMouseEnter={playHover}
               >
-                zedrick.espiritu07292004@gmail.com
+                zedrickespiritu.s@gmail.com
               </a>
             </div>
             <div className="hidden sm:block w-px h-4 bg-rule" />

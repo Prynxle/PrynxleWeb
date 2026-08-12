@@ -132,7 +132,7 @@ export default function Header() {
               <FacebookIcon size={16} />
           </a>
           <a
-            href="mailto:zedrick.espiritu07292004@gmail.com"
+            href="mailto:zedrickespiritu.s@gmail.com"
             className="text-muted hover:text-ink transition-colors"
             aria-label="Email"
             onMouseEnter={playHover}
@@ -195,7 +195,7 @@ export default function Header() {
             <FacebookIcon size={16} />
             </a>
             <a
-              href="mailto:zedrick.espiritu07292004@gmail.com"
+              href="mailto:zedrickespiritu.s@gmail.com"
               className="text-muted hover:text-ink transition-colors"
               onMouseEnter={playHover}
             >
