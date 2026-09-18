@@ -8,6 +8,8 @@
   --rule: #e0e0e0;
   --accent: #0a0a0a;
   --radius: 0px;
+  --font-geist-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @theme inline {
@@ -97,6 +99,16 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+
+  .project-tag {
+    background: var(--ink);
+    color: var(--surface);
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    padding: 0.125rem 0.5rem;
+    text-transform: uppercase;
   }
 }
 

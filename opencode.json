@@ -1,0 +1,124 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "orchestrator",
+  "subagent_depth": 1,
+  "lsp": true,
+  "provider": {
+    "tokenrouter": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "TokenRouter",
+      "options": {
+        "baseURL": "https://api.tokenrouter.com/v1",
+        "apiKey": "{env:TOKENROUTER_API_KEY}"
+      },
+      "models": {
+        "qwen/qwen3.7-max": { "name": "Qwen 3.7 Max" }
+      }
+    }
+  },
+  "agent": {
+    "orchestrator": {
+      "description": "Coordinates Planner, Decision, Builder, and QA agents for Johia Scheduler work.",
+      "mode": "primary",
+      "prompt": "{file:./zed/agents/orchestrator.md}",
+      "permission": {
+        "task": {
+          "*": "deny",
+          "planner": "allow",
+          "decision": "allow",
+          "builder": "allow",
+          "qa": "allow"
+        },
+        "edit": "allow",
+        "bash": "allow"
+      }
+    },
+    "planner": {
+      "description": "Analyzes Johia Scheduler requests and produces implementation plans.",
+      "mode": "subagent",
+      "hidden": true,
+      "prompt": "{file:./zed/agents/planner.md}",
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+        "bash": "allow"
+      }
+    },
+    "decision": {
+      "description": "Evaluates Johia Scheduler architecture, security, data integrity, and technical decisions.",
+      "mode": "subagent",
+      "hidden": true,
+      "prompt": "{file:./zed/agents/decision.md}",
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+        "bash": "allow"
+      }
+    },
+    "builder": {
+      "description": "Implements an approved Johia Scheduler Planner handoff.",
+      "mode": "subagent",
+      "hidden": true,
+      "prompt": "{file:./zed/agents/builder.md}",
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": "allow"
+      }
+    },
+    "qa": {
+      "description": "Independently reviews Johia Scheduler changes and verification evidence.",
+      "mode": "subagent",
+      "hidden": true,
+      "prompt": "{file:./zed/agents/QA.md}",
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+        "bash": "allow"
+      }
+    }
+  },
+  "mcp": {
+    "Memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "enabled": true
+    },
+    "Sequential Thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "Playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"],
+      "enabled": true
+    },
+    "Github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true,
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "Supabase": {
+      "type": "remote",
+      "url": "https://mcp.supabase.com/mcp?project_ref=ntwhucspiqvuzazzsgax",
+      "enabled": true
+    },
+    "21st": {
+      "type": "remote",
+      "url": "https://21st.dev/api/mcp",
+      "enabled": true,
+      "headers": {
+        "x-api-key": "{env:TWENTY_FIRST_API_KEY}"
+      }
+    },
+    "Context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    }
+  }
+}
